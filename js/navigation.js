@@ -72,6 +72,4 @@ document.addEventListener('DOMContentLoaded', function(event) {
             menubar.classList.add("active");
         }
     }
-
-    // Optionally attach events for toggleSidebar and hideSidebar if needed
 });
