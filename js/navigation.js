@@ -28,15 +28,18 @@ function updateActiveLinks() {
 	});
 }
 
-function updateHeader() {
-	if(window.scrollY > 0) {
+function toggleHeader(activeWhen) {
+	if(activeWhen) {
 		header.classList.add("active");	
 		logospan.classList.add("active");
-	}
-	else {
+	} else {
 		header.classList.remove("active");
 		logospan.classList.remove("active");
 	}
+}
+
+function updateHeader() {
+	toggleHeader(window.scrollY > 0);
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
@@ -54,10 +57,7 @@ function toggleSidebar() {
 		sidebar.classList.remove("active");
 		document.body.style.overflowY = 'scroll';
 		menubar.classList.remove("active");
-		if(window.scrollY <= 0) {
-			header.classList.remove("active");	
-			logospan.classList.remove("active");
-		}
+		updateHeader();
 	} else {
 		document.body.style.overflowY = 'hidden';
 		sidebar.classList.add("active");
@@ -65,10 +65,4 @@ function toggleSidebar() {
 		logospan.classList.add("active");
 		menubar.classList.add("active");
 	}
-}
-
-function hideSidebar() {
-	sidebar.classList.remove("active");
-	document.body.style.overflowY = 'scroll';
-	menubar.classList.remove("active");
 }
