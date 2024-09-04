@@ -52,6 +52,13 @@ window.addEventListener("scroll", function(event) {
 	updateHeader();
 });
 
+function hideSidebar() {
+	sidebar.classList.remove("active");
+	document.body.style.overflowY = 'scroll';
+	menubar.classList.remove("active");
+	updateHeader();
+}
+
 function toggleSidebar() {
 	if(sidebar.classList.contains("active")) {
 		sidebar.classList.remove("active");
