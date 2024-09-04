@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     const scrollOffset = 150;
 
+	menubar.onclick = toggleSidebar;
+
+	s_links.forEach(l => {
+		l.onclick = hideSidebar;
+	});
+
     function updateActiveLinks() {
         sections.forEach(sec => {
             let top = window.scrollY;

@@ -139,6 +139,7 @@ function checkZoomLevel() {
 		particlesLoaded = false;
 	}
 }
-
-window.addEventListener('resize', checkZoomLevel);
-window.addEventListener('load', checkZoomLevel);
+document.addEventListener('DOMContentLoaded', function(event) {
+	checkZoomLevel();
+	window.addEventListener('resize', checkZoomLevel);
+});
