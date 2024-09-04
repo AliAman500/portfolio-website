@@ -89,10 +89,6 @@ body {
 	transform: translateX(5px);
 }
 
-.navbar > .logo:hover {
-	transform: scale(1.05);
-}
-
 .navbar > .links {
 	position: absolute;
 	top: 50%;
