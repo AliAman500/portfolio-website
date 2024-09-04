@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.animate-me');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    });
+
+    elements.forEach((element) => {
+        observer.observe(element);
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', function(event) {
     let header = document.querySelector(".header");
     let logospan = document.querySelector(".logo > .last");
