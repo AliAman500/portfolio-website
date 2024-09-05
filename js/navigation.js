@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
     const elements = document.querySelectorAll('.animate-me');
 
     const observer = new IntersectionObserver((entries) => {
