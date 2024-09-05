@@ -1,4 +1,6 @@
 window.addEventListener("load", function() {
+	let loadingSquare = document.querySelector(".loading-square");
+	loadingSquare.classList.add("stop");
     const elements = document.querySelectorAll('.animate-me');
 
     const observer = new IntersectionObserver((entries) => {
