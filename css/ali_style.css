@@ -165,7 +165,7 @@ body {
 	align-items: center;
 	text-align: center;
 	gap: 50px;
-	display: none;
+	display: flex;
 }
 
 .sidebar.active {
@@ -742,10 +742,6 @@ section > .content {
 
 	.navbar > .sm_links, .navbar > .links {
 		display: none;
-	}
-
-	.sidebar {
-		display: flex;
 	}
 }
 

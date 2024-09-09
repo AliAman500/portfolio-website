@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
     let sidebar = document.querySelector(".sidebar");
     let menubar = document.querySelector(".navbar > #menu-bar");
 
+	window.addEventListener("resize", () => {
+		if(window.innerWidth >= 650) {
+			sidebar.classList.remove("active");
+			document.body.style.overflowY = 'scroll';
+			menubar.classList.remove("active");
+			updateHeader();
+		}
+	});
+
     const scrollOffset = 150;
 
 	menubar.onclick = toggleSidebar;
