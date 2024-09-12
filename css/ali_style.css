@@ -273,7 +273,7 @@ section > .content {
 	height: fit-content;
 }
 
-#home > .content > .text_container h3 {
+#home > .content > .text_container > .description {
     position: relative;
     font-size: 1.3rem;
     color: var(--color-3);
@@ -281,7 +281,7 @@ section > .content {
     text-align: center;
 }
 
-#home > .content > .text_container h2 {
+#home > .content > .text_container > .heading {
     position: relative;
     font-size: 1.8rem;
     color: var(--color-6);
@@ -290,8 +290,8 @@ section > .content {
 	margin-bottom: 14px;
 }
 
-#home > .content > .text_container h2::before,
-#home > .content > .text_container h2::after {
+#home > .content > .text_container > .heading::before,
+#home > .content > .text_container > .heading::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -300,25 +300,21 @@ section > .content {
 	border-radius: 10px;
 }
 
-#home > .content > .text_container h2::before {
+#home > .content > .text_container > .heading::before {
     left: -150px;
     background: linear-gradient(to left, var(--color-6), transparent);
 }
 
-#home > .content > .text_container h2::after {
+#home > .content > .text_container > .heading::after {
     right: -150px;
     background: linear-gradient(to right, var(--color-6), transparent);
 }
 
 
-#home > .content > .text_container > h1 {
+#home > .content > .text_container > .name {
 	font-size: 7.1rem;
 	font-weight: 350;
 	color: var(--color-3);
-}
-
-#home > .content > .text_container h1 span {
-	color: var(--color-6);
 }
 
 #home > .content > .text_container > .links {
@@ -746,21 +742,21 @@ section > .content {
 }
 
 @media only screen and (max-width: 600px) {
-	#home > .content > .text_container h1 {
+	#home > .content > .text_container > .name {
 		font-size: 6rem;
 		transform: scale(0.96);
 	}
-	#home > .content > .text_container h2::before {
+	#home > .content > .text_container > .heading::before {
 		left: -100px;
 		width: 90px;
 	}
 	
-	#home > .content > .text_container h2::after {
+	#home > .content > .text_container > .heading::after {
 		right: -100px;
 		width: 90px;
 	}
 
-	#home > .content > .text_container h3 {
+	#home > .content > .text_container > .description {
 		font-size: 1.1rem;
 	}
 
