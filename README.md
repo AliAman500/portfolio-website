@@ -1,4 +1,4 @@
-# Portfolio
+# Personal Portfolio
 
 Welcome to my portfolio website! This is my first published website designed to showcase my projects and skills.
 
