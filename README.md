@@ -1,10 +1,10 @@
-# Portfolio Website
+# Portfolio
 
 Welcome to my portfolio website! This is my first published website designed to showcase my projects and skills.
 
 ## Overview
 
-This website serves as a platform for displaying my work and expertise. Originally, this project was developed as a Spring Boot application with a small backend functionality for sending messages. However, I decided to simplify the project and focus on the frontend, which now features only HTML, CSS, and JavaScript.
+This website serves as a platform for displaying my work and expertise. Originally, this project was developed as a Spring Boot application with a small backend functionality for sending messages. However, I decided to simplify the project and focus on the frontend, which now features only vanilla HTML, CSS, and JavaScript.
 
 ## Features
 
