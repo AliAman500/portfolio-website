@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     let sections = document.querySelectorAll("section");
     let sidebar = document.querySelector(".sidebar");
     let menubar = document.querySelector(".navbar > #menu-bar");
+	let scrollbarWidth = getScrollbarWidth();
+    let sectionsContainer = document.querySelector('.sections');
+	sectionsContainer.style.width = `calc(100vw - ${scrollbarWidth}px)`;
 
 	window.addEventListener("resize", () => {
 		if(window.innerWidth >= 650) {
@@ -107,3 +110,21 @@ document.addEventListener('DOMContentLoaded', function(event) {
         }
     }
 });
+
+function getScrollbarWidth() {
+    const outer = document.createElement('div');
+    
+    outer.style.visibility = 'hidden';
+    outer.style.overflow = 'scroll';
+    outer.style.msOverflowStyle = 'scrollbar';
+    outer.style.width = '100px';
+    outer.style.height = '100px';
+
+    document.body.appendChild(outer);
+
+    const scrollbarWidth = outer.offsetWidth - outer.clientWidth;
+
+    document.body.removeChild(outer);
+
+    return scrollbarWidth;
+}

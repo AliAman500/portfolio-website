@@ -225,25 +225,24 @@ body {
 
 .sections {
 	position: absolute;
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
 section {
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 }
 
 section > .content {
-	margin-left: 20px;
-	margin-right: 20px;
-	width: 100vw;
+	width: 100%;
 	max-width: 1200px;
 	height: 100vh;
 	min-height: 600px;
 	display: flex;
+	margin: 0 18px;
 }
 
 #particles-js {
