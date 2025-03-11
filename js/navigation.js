@@ -1,6 +1,11 @@
 window.addEventListener("load", function() {
-	let loadingSquare = document.querySelector(".loading-square");
-	loadingSquare.classList.add("stop");
+    let loadingSquare = document.querySelector(".loading-square");
+    loadingSquare.classList.add("stop");
+
+    loadingSquare.addEventListener("transitionend", function() {
+        loadingSquare.remove();
+    });
+
     const elements = document.querySelectorAll('.animate-me');
 
     const observer = new IntersectionObserver((entries) => {
